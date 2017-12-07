@@ -15,9 +15,6 @@ html,body{
         background-color: #367EA8;
         text-align: center;
     }
-    .lt_side .header a{
-    
-    }
     .lt_side .header a h2{
         line-height: 50px;
         color: #fff;
@@ -44,6 +41,9 @@ html,body{
     .lt_side .content li.active{
         background-color: black;
         border-left-color:yellowgreen;
+    }
+    .lt_side .content li.active a{
+        color: #fff;
     }
     .lt_side .content li a{
         line-height: 30px;

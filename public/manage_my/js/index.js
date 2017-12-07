@@ -64,7 +64,7 @@ $(function(){
         ]
     };
     myChart2.setOption(option2);
-
+    //点击切换侧边栏
     $('.lt_main .header a:eq(0)').click(function(){
         if($(this).hasClass('menu')){
             $(this).removeClass('menu');
@@ -76,4 +76,9 @@ $(function(){
             $('.lt_main').stop().animate({paddingLeft:180},200);
         }
     })
+    //点击左侧列表高亮
+    $('.lt_side .content ul>li>a').click(function(){
+        $(this).parent().addClass('active').siblings().removeClass('active');
+    })
+
 })
