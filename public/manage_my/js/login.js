@@ -1,7 +1,10 @@
 $(function () {
-
-
+    //使用表单校验插件
     $('form').bootstrapValidator({
+        //1. 指定不校验的类型，默认为[':disabled', ':hidden', ':not(:visible)'],可以不设置
+        // excluded: [':disabled', ':hidden', ':not(:visible)'],
+
+        //2. 指定校验时的图标显示，默认是bootstrap风格
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok-circle',
             invalid: 'glyphicon glyphicon-remove-circle',
@@ -21,8 +24,8 @@ $(function () {
                         max: 12,
                         message: '用户名长度必须在3到12之间'
                     },
-                    callback:{
-                        message:'用户名不存在！'
+                    callback: {
+                        message: '用户名不存在！'
                     }
                 }
             },
@@ -38,8 +41,8 @@ $(function () {
                         max: 16,
                         message: '密码长度必须在6到16之间'
                     },
-                    callback:{
-                        message:'密码错误！'
+                    callback: {
+                        message: '密码错误！'
                     }
                 }
             }
@@ -57,22 +60,23 @@ $(function () {
                 console.log(data);
                 if (data.success) {
                     window.location.href = './index.html';
-                }else{
-                    var validator = $("form").data('bootstrapValidator');  //获取表单校验实例
-                    if(data.error==1000){
+                } else {
+                    var validator = $("form").data('bootstrapValidator'); //获取表单校验实例
+                    if (data.error == 1000) {
                         validator.updateStatus('username', 'INVALID', 'callback');
-                    }else if(data.error==1001){
+                    } else if (data.error == 1001) {
                         validator.updateStatus('password', 'INVALID', 'callback');
                     }
                 }
                 //结束进度条
-                setTimeout(function(){
+                setTimeout(function () {
                     NProgress.done();
-                },500);
+                }, 500);
             }
         })
     });
-    $('button[type=reset]').click(function(){
+    //提交数据到后台
+    $('button[type=reset]').click(function () {
         var validator = $("form").data('bootstrapValidator');
         validator.resetForm();
     })
