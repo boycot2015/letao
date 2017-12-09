@@ -63,6 +63,7 @@ html,body{
 }
 .lt_side .content li>a.active{
     background-color: black;
+    color: #f0f0f0;
     border-left-color:yellowgreen;
 }
 .lt_side .content li a{

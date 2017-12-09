@@ -65,7 +65,7 @@
         <div class="nav">
             <ol class="breadcrumb">
                 <li>
-                    <a href="#">管理系统</a>
+                    <a href="./index.html">管理系统</a>
                 </li>
                 <li>
                     <span>用户管理</span>
@@ -138,18 +138,14 @@
         <td>{{$value.username}}</td>
         <td>{{$value.mobile}}</td>
         <td>
-            {{if $value.isDelete==0}}
-            正常
-            {{else}}
-            已禁用
-            {{/if}}
+            {{if $value.isDelete==0}} 正常 {{else}} 已禁用 {{/if}}
         </td>
-        <td>
-                {{if $value.isDelete==0}}
-                <button class="btn btn-danger">禁用</button>
-                {{else}}
-                <button class="btn btn-primary">启用</button>
-                {{/if}}
+        <td data-id="{{$value.id}}">
+            {{if $value.isDelete==0}}
+            <button class="btn btn-danger">禁用</button>
+            {{else}}
+            <button class="btn btn-primary">启用</button>
+            {{/if}}
         </td>
     </tr>
     {{/each}}

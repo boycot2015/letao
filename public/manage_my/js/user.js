@@ -27,6 +27,24 @@ $(function () {
         })
     }
     getData();
-
+    $('tbody').on('click','button',function(){
+        var id = $(this).parent().attr('data-id');
+        if($(this).html()=='启用'){
+            var isDelete = 0;
+        }else{
+            var isDelete = 1;
+        }
+        $.ajax({
+            url:'/user/updateUser',
+            data:{
+                id:id,
+                isDelete:isDelete
+            },
+            type:'post',
+            success:function(data){
+                getData();
+            }
+        })
+    })
 
 })
