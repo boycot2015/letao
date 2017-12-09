@@ -30,6 +30,7 @@ ol,ul{
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
     background-color: #212C32;
 }
 .lt_side .header{

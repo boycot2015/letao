@@ -11,12 +11,10 @@ $(function(){
     $('.lt_main .header a:eq(0)').click(function(){
         if($(this).hasClass('menu')){
             $(this).removeClass('menu');
-            $('.lt_side').stop().animate({width:0},200);
-            $('.lt_main').stop().animate({paddingLeft:0},200);
+            $('.lt_side').stop().animate({width:0},200).siblings('.lt_main').stop().animate({paddingLeft:0},200);
         }else{
             $(this).addClass('menu');
-            $('.lt_side').stop().animate({width:180},200);
-            $('.lt_main').stop().animate({paddingLeft:180},200);
+            $('.lt_side').stop().animate({width:180},200).siblings('.lt_main').stop().animate({paddingLeft:180},200);
         }
     })
 
