@@ -1,6 +1,7 @@
 $(function(){
     // 基于准备好的dom，初始化echarts实例
     //柱状图
+
     var myChart = echarts.init(document.getElementById('main_left'));
     var option = {
         title: {
@@ -64,21 +65,6 @@ $(function(){
         ]
     };
     myChart2.setOption(option2);
-    //点击切换侧边栏
-    $('.lt_main .header a:eq(0)').click(function(){
-        if($(this).hasClass('menu')){
-            $(this).removeClass('menu');
-            $('.lt_side').stop().animate({width:0},200);
-            $('.lt_main').stop().animate({paddingLeft:0},200);
-        }else{
-            $(this).addClass('menu');
-            $('.lt_side').stop().animate({width:180},200);
-            $('.lt_main').stop().animate({paddingLeft:180},200);
-        }
-    })
-    //点击左侧列表高亮
-    $('.lt_side .content ul>li>a').click(function(){
-        $(this).parent().addClass('active').siblings().removeClass('active');
-    })
 
+    
 })
