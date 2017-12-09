@@ -106,3 +106,8 @@ margin: 30px 20px;
 .lt_main .content{
 padding-left: 20px;
 }
+
+/* 工具类 */
+.mb_30{
+    margin-bottom: 30px;
+}
