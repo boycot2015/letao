@@ -19,6 +19,9 @@ ol,ul{
 html,body{
     height: 100%;
 }
+.table>tbody>tr>td{
+    vertical-align: middle;
+}
 
 /* 侧边栏 */
 .lt_side{
@@ -82,7 +85,6 @@ html,body{
 
 .lt_main{
 height: 100%;
-background-color: plum;
 padding-left: 180px;
 }
 .lt_main .header{
