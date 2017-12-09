@@ -48,7 +48,7 @@ $(function () {
                 validators: {
                     //不能为空
                     notEmpty: {
-                        message: '分类名不能为空'
+                        message: '分类名称不能为空'
                     }
                 }
             }

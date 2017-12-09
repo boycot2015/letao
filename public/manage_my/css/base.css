@@ -16,9 +16,9 @@ ol,ul{
     padding: 0;
     list-style: none;
 }
-html,body{
+/* html,body{
     height: 100%;
-}
+} */
 .table>tbody>tr>td{
     vertical-align: middle;
 }
@@ -30,7 +30,6 @@ html,body{
     position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
     background-color: #212C32;
 }
 .lt_side .header{
@@ -110,4 +109,11 @@ padding-left: 20px;
 /* 工具类 */
 .mb_30{
     margin-bottom: 30px;
+}
+
+.form-group input[type="file"]{
+    opacity: 0;
+    position: absolute;
+    width: 82px;
+    height: 34px;
 }

@@ -11,7 +11,6 @@ $(function () {
             },
             success: function (data) {
                 // console.log(data);
-
                 $('tbody').html(template('first', data));
                 $("#paginator").bootstrapPaginator({
                     bootstrapMajorVersion: 3, //默认是2，如果是bootstrap3版本，这个参数必填
@@ -48,7 +47,7 @@ $(function () {
                 validators: {
                     //不能为空
                     notEmpty: {
-                        message: '分类名不能为空'
+                        message: '分类名称不能为空'
                     }
                 }
             }
