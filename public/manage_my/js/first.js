@@ -64,6 +64,7 @@ $(function () {
                 console.log(data);
                 //隐藏添加分类模态框
                 $('.modal-add').modal('hide');
+                //清除输入框的内容并重置
                 $('.modal-add').find('input[type=text]').val('');
                 var validator = $("form").data('bootstrapValidator');
                 validator.resetForm();
