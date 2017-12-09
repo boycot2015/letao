@@ -43,7 +43,7 @@ $(function () {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            //校验用户名，对应name表单的name属性
+            //校验分类名称，对应name表单的name属性
             categoryName: {
                 validators: {
                     //不能为空

@@ -53,7 +53,7 @@ $(function () {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            //校验用户名，对应name表单的name属性
+            //校验商品名，对应name表单的name属性
             proName: {
                 validators: {
                     //不能为空
